@@ -1,0 +1,15 @@
+create Ec2 instance and click on connect -> open sss -> scroll down -> click connect button  -> establish the connection -> and follow the below commands 
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+java -version
+ 
+go to downloads where .pem is downloaded select the path and open in cmd , follow below command
+scp -i web-aws.pem "C:\Users\singh\Downloads\employee-demo\employee-demo\target/demo-employee-app-0.0.1-SNAPSHOT.jar" ubuntu@15.207.254.160:/home/ubuntu
+
+check in vm with ls cmd
+then follow below 
+java -jar demo-employee-app-0.0.1-SNAPSHOT.jar
+
+change the security port as 8080 then run
+go to browser copy your public address and :8080 you can view the result
+ http://15.207.254.160:8080
